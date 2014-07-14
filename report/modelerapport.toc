@@ -1,0 +1,45 @@
+\select@language {french}
+\contentsline {chapter}{\numberline {1}Remerciement}{6}{chapter.3}
+\contentsline {chapter}{\numberline {2}Introduction}{7}{chapter.4}
+\contentsline {chapter}{\numberline {3}Presentation du laboratoire}{8}{chapter.5}
+\contentsline {section}{\numberline {3.1}Université François-Rabelais}{8}{section.6}
+\contentsline {section}{\numberline {3.2}Laboratoire de géosciences}{9}{section.8}
+\contentsline {chapter}{\numberline {4}Techniques utilisés}{11}{chapter.14}
+\contentsline {section}{\numberline {4.1}MVC}{11}{section.15}
+\contentsline {section}{\numberline {4.2}Redmine}{12}{section.20}
+\contentsline {section}{\numberline {4.3}Matlab}{12}{section.23}
+\contentsline {section}{\numberline {4.4}JfreeChart}{13}{section.25}
+\contentsline {section}{\numberline {4.5}GIMP}{13}{section.27}
+\contentsline {section}{\numberline {4.6}HTML Help Workshop}{14}{section.29}
+\contentsline {section}{\numberline {4.7}MyEclipse}{14}{section.31}
+\contentsline {chapter}{\numberline {5}Présentation de la mission du stage}{15}{chapter.33}
+\contentsline {section}{\numberline {5.1}Analyser les besoins}{15}{section.34}
+\contentsline {section}{\numberline {5.2}Designer le système}{15}{section.35}
+\contentsline {subsection}{\numberline {5.2.1}Environnement Logiciel}{15}{subsection.36}
+\contentsline {subsection}{\numberline {5.2.2}module de fonctionnalité}{15}{subsection.37}
+\contentsline {section}{\numberline {5.3}Programmer}{15}{section.43}
+\contentsline {section}{\numberline {5.4}Tester ce système}{16}{section.48}
+\contentsline {chapter}{\numberline {6}Travail réalisé}{17}{chapter.49}
+\contentsline {section}{\numberline {6.1}Amélioration de l'interface de mainpage}{17}{section.50}
+\contentsline {section}{\numberline {6.2}Module Fichiers}{19}{section.54}
+\contentsline {subsection}{\numberline {6.2.1}Configuration}{19}{subsection.55}
+\contentsline {subsection}{\numberline {6.2.2}visualisation}{20}{subsection.57}
+\contentsline {section}{\numberline {6.3}Module Graphiques}{20}{section.59}
+\contentsline {subsection}{\numberline {6.3.1}Série Chronologique}{20}{subsection.60}
+\contentsline {subsection}{\numberline {6.3.2}Distribution Q et C}{21}{subsection.62}
+\contentsline {subsection}{\numberline {6.3.3}log Q/C(visualisation Q50)}{22}{subsection.65}
+\contentsline {subsection}{\numberline {6.3.4}log Q/C(visualisation saison)}{22}{subsection.67}
+\contentsline {subsection}{\numberline {6.3.5}log Q/C(autres paramètres)}{23}{subsection.69}
+\contentsline {subsection}{\numberline {6.3.6}graphique durée de flux eau}{23}{subsection.71}
+\contentsline {section}{\numberline {6.4}Module Calcul flux }{24}{section.73}
+\contentsline {section}{\numberline {6.5}Module Système expert}{28}{section.84}
+\contentsline {subsection}{\numberline {6.5.1}Calcul d'indicateur}{28}{subsection.85}
+\contentsline {subsection}{\numberline {6.5.2}Méthode recommandée}{28}{subsection.87}
+\contentsline {subsection}{\numberline {6.5.3}Incertitude (M5)}{29}{subsection.89}
+\contentsline {subsection}{\numberline {6.5.4}Fréquence optimale (M5)}{29}{subsection.91}
+\contentsline {section}{\numberline {6.6}Module Aide}{30}{section.93}
+\contentsline {subsection}{\numberline {6.6.1}Aide}{30}{subsection.94}
+\contentsline {subsection}{\numberline {6.6.2}A propos}{30}{subsection.101}
+\contentsline {chapter}{\numberline {7}Difficultés rencontrées}{32}{chapter.103}
+\contentsline {chapter}{\numberline {8}Conclusion}{33}{chapter.104}
+\contentsline {chapter}{\numberline {9}Annexes}{35}{chapter.109}

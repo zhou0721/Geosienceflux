@@ -1,0 +1,2 @@
+Mettre à jour la machine virtuelle de java :
+http://www.java.com/fr/download/

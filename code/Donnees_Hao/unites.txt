@@ -1,0 +1,23 @@
+TEMP_EAU	Température de l'Eau	°C	degré Celsius
+pH	Potentiel en Hydrogène (pH)	-	unité pH
+COND	Conductivité à 25°C	µS/cm	microSiemens par centimètre
+O2	Oxygène dissous	mgO2/L	milligramme d'oxygène par litre
+DBO5	Demande Biochimique en oxygène en 5 jours (D.B.O.5)	mgO2/L	milligramme d'oxygène par litre
+MES	Matières en suspension	mg/L	milligramme par litre
+COD	Carbone Organique Dissous	mgC/L	milligramme de carbone par litre
+NH4	Ammonium	mgNH4/L	milligramme d'ammonium par litre
+NO2	Nitrites	mgNO2/L	milligramme de nitrite par litre
+NO3	Nitrates	mgNO3/L	milligramme de nitrate par litre
+NKj	Azote Kjeldahl	mgN/L	milligramme d'azote par litre
+SIO	Silicates	mgSiO3/L	milligramme de silice par litre
+PTO	Phosphore total	mgP/L	milligramme de phosphore par litre
+PO4	Orthophosphates	mgPO4/L	milligramme de phosphate par litre
+SO4	Sulfates	mgSO4/L	milligramme de sulfate par litre 
+HCO3	Bicarbonates	mgHCO3/L	milligramme de bicarbonate par litre
+CHLA	Chlorophylle a	µg/L	microgramme par litre
+PheoP	Phéopigments	µg/L	microgramme par litre
+Na	Sodium	mgNa/L milligramme de sodium par litre
+K	Potassium	mgK/L milligramme de potassium par litre
+Cl	Chlorures	mgCl/L	milligramme de chlorure par litre
+Ca	Calcium	mgCa/L	milligramme de calcium par litre
+Mg	Magnésium	mgMg/L	milligramme de magnésium par litre

@@ -1,0 +1,56 @@
+Mes travaux principaux sont d'optimiser l'interface de graphique sur une application ancienne et calculer le flux polluant par plusieurs méthodes.
+
+
+Madame Florence et Florentina ont fixé les objectifs énoncés ci-dessous que je dois avoir remplis à la fin de mon stage :
+\section{Analyser les besoins}
+Parce que je suis la deuxième personne à faire ce projet, donc je n'ai pas besoin de faire les cahiers des charges. Madame Florence et Florentina m'ont expliqué les analyses les besoins très clairement. Le laboratoire a développé un système expert pour optimiser de la meilleure méthode de calcul des flux.
+Les méthodes sont écrit dans un rapport, elles m'ont présenté les théories de chaque méthode. Pour différentes méthodes, leur performance dépend de la variabilité des concentrations C(t) en fonction de comportement des débits. Le système permet de choisir la meilleure méthode au sens d'une incertitude minimale, certains d'autres paramètres.
+
+
+\section{Designer le système}
+
+\subsection{Environnement Logiciel}
+	Parce que mon travail est effectué sur la base d'une version ancienne, donc l'environnement logiciel a été décidé. Je travail sous Windows 7, et l'IDE est MyEclipse. Puisque Java est un langage multi-plateforme, donc le programme est très facilement portables sur plusieurs systèmes d'exploitation tels que UNIX, Windows, Mac OS ou GNU/Linux, avec peu ou pas de modifications.
+\subsection{module de fonctionnalité}
+	Selon les besoins du laboratoire, on suppose que ce système est composé par 5 modules:
+	
+\begin{enumerate}
+	\item \textbf{Fichiers}   \ \ 
+	On peut configurer les chemins des fichiers qui stock les données de débit et polluant.
+	
+	\item \textbf{Graphiques} \ \ 
+	On peut voir les graphiques qui présentent les informations sur débits et polluants.
+	\item \textbf{Calcul flux} \ \ 
+	Dans ce module, on doit importer quelques méthodes pour calculer le flux.
+	\item \textbf{Système expert} \ \ 
+	Dans ce module, l'utilisateur peut savoir la méthode recommandée et les paramètres importants.
+	\item \textbf{Aide} \ \ 
+	L'utilisateur peut chercher les référence dans ce module et aussi peut savoir les informations sur l'auteur
+\end{enumerate}
+
+\section{Programmer}
+Après finir les analyses des besoins, je commence à programmer selon le design. De plus, concernant le besoin de la sécurité, je dois mettre en place des tâches suivantes:
+\begin{enumerate}
+	\item \textbf{Améliorer l'interface de graphique}
+	
+	
+	La première étape consiste à améliorer l'interface de graphique. Parce que l'interface de la version 1.0 n'est pas très jolie, et ma première tâche est de changer l'interface ancienne et ajouter quelques composants pour bien afficher les informations. 
+	\item \textbf{Afficher les données sous la forme de différents graphiques}
+	
+	
+	La deuxième partie est d'afficher les données sous la forme de différents graphiques, aidant l'utilisateur à visualiser des données importantes telles que la chronologie des débits et des polluants, le type de cours d'eau ou encore la distribution des mesures, les relations entre des débit et polluants.
+	\item \textbf{Indiquer la méthode recommandé}
+	
+	
+	La troisième étape à pour objet la présentation à l'utilisateur des indicateurs issus des graphiques ou calculés à partir des données, afin de lui permettre de choisir la méthode de calcul la plus adaptée au système fluvial étudié.Cette étape doit aussi comporter un outil d'aide à la décision qui conseille les méthodes les plus appropriées, issues des abaques obtenus grâce à une thèse menant une étude comparative sur les différentes méthodes de calcul.
+	\item \textbf{Calcul le flux polluant par plusieurs méthodes}
+	
+	
+	Finalement, le logiciel doit permettre d'appliquer des méthodes de calcul le flux. Dans mon projet, il y a 17 méthode pour le calculer.En plus du flux estimé grâce à la méthode, l'utilisateur doit aussi connaître le biais et l'imprécision du résultat, qui sont là aussi extraits d'abaques. Le choix doit être proposé entre plusieurs types de calculs: un calcul par année ou par saison et sur une période déterminée.
+\end{enumerate}
+
+
+\section{Tester ce système}
+Après finir la programmation, le test est la dernière étape pendant le développement et aussi obligatoire. Le but est de trouver des problèmes du logiciel. Les tests de vérification s'assure que ce système réagit de la façon prévue par ses concepteurs est conforme aux attentes du client. Dans mon projet, j'ai utilisé le test en boîte noire pour le tester. Grâce au test, j'ai trouvé beaucoup d'erreurs qui sont causées par l'absence de réflexion. Parce que dans les calculs mathématiques, c'est très facile d'oublier de compter de certains cas particuliers. Il m'a aidé beaucoup parce que j'ai du temps de corriger les erreurs.
+
+

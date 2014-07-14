@@ -1,0 +1,365 @@
+\textbf{Abaques de biais d'un flux}
+\bigskip
+\bigskip
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=12cm]{pics/biais1.jpg}%
+\label{fig:biais1}%
+\end{figure}
+\bigskip
+\bigskip
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=12cm]{pics/biais2.jpg}%
+\label{fig:biais2}%
+\end{figure}
+\newpage
+\textbf{Abaques d'imprécision d'un flux}
+\bigskip
+\bigskip
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=12cm]{pics/imprecision1.jpg}%
+\label{fig:imprecision1}%
+\end{figure}
+\bigskip
+\bigskip
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=12cm]{pics/imprecision2.jpg}%
+\label{fig:imprecision2}%
+\end{figure}
+\newpage
+
+\textbf{Méthodes de calculs de flux }\\
+
+Dix méthodes basées sur les moyennes des concentrations et/ou des débits sont présentées ci-aprés. Pour certaines méthodes, on utilise les débits des jours de prélèvements et pour d'autres la chronique des débits journaliers disponibles aux stations hydrométriques. Nous noterons ici les méthodes de M1 à M10.\\
+Les flux sont calculés sur une période T à l'aide de n prélèvements pour les constituants ayant des concentrations Ci (i=1 à n) et des débits Qi (i=1 à n). L'intervalle de temps $\Delta$t entre 2 prélèvements est variable (mensuel dans le cas des suivis RNB, c'est-à-dire en moyenne  $\Delta$t=30 jours avec une dispersion autour de cette moyenne de quelques jours pour le cas de la Loire moyenne. Exemple : Pas de prélèvement le samedi ou dimanche).
+Dans les exemples suivants, le flux est calculé à partir des 12 valeurs données précédemment (tableau 1), le flux réel (ou de référence) est lui calculé à partir de la base de données journalières des débits et des concentrations.
+
+\begin{itemize}
+	\item \textbf{M1 : Produit des moyennes arithmétiques des concentrations et des débits}\\
+	Cet algorithme est basé sur le produit des moyennes des concentrations et des débits instantanés au moment des prélèvements.
+\begin{center}
+$F_{M1}=K_{1}(\sum^{n}_{i=1}C_{i}/n)*(\sum^{n}_{i=1}Q_{i}/n)$  \qquad   \qquad \qquad           (4)
+\end{center}
+FM1 = flux estimé par la méthode M1 pour une période donnée (en général sur une année, tonnes/an)\\
+Ci = concentration instantané au moment du prélèvement i (en général mg/l)\\
+Qi = débit instantané au moment du prélèvement i ($m^3/s$)\\
+n = nombre de prélèvements sur la période de calcul des flux (dans l'exemple ci-après, n=12)\\
+$K_{1}$ = facteur de conversion du flux pour un résultat en tonnes/an (pour Ci en mg/l et Qi en $m^3/s$/s ; $K_{1}$= 31.536)\\
+	\item \textbf{M2 : Moyenne arithmétique des flux instantanés}\\
+	Le flux estimé par cette méthode utilise la moyenne des flux instantanés.
+	
+\begin{center}
+$F_{M2} = K_{2}\sum^{n}_{i=1}CiQi/n$ \qquad   \qquad \qquad      \qquad      (5)
+\end{center}
+$	F_{M2} $= flux estimé par la méthode M2 pour une période donnée (en général sur une année, tonnes/an)\\
+Ci = concentration instantané au moment du prélèvement i (en général mg/l)\\
+Qi = débit instantané au moment du prélèvement i ($m^3/s$)\\
+n = nombre de prélèvements sur la période de calcul des flux (dans l'exemple ci-après, n=12)\\
+$K_{2}$ = facteur de conversion du flux pour un résultat en tonnes/an (pour Ci en mg/l et Qi en $m^3/s$ ; $K_{2}$= 31.536)\\
+
+	\item \textbf{M3 : produit des concentrations (jours de prélèvements) et des débits moyens entre les jours de prélèvements}\\
+	Cette équation est décrite comme la somme des produits des concentrations instantanées avec le débit moyen entre 2 échantillonnages consécutifs.
+	
+\begin{center}
+$F_{M3} =K_{3}\sum^{n}_{i=1}(Ci\bar{Q}_{i-j,j+j})$ \qquad   \qquad \qquad      \qquad  (6)
+\end{center}
+FM3 = flux estimé par la méthode M3 pour une période donnée (en général sur une année, tonnes/an)\\
+Ci = concentration instantané au moment du prélèvement i (en général mg/l)\\
+$\bar{Q}_{i-j,j+j}$ = débit moyen pour la période qui entoure le prélèvement\\
+n = nombre de prélèvements sur la période de calcul des flux (dans l'exemple ci-après, n=12)\\
+$K_{3}$ = facteur de conversion du flux pour un résultat en tonnes/an (pour Ci en mg/l et Qi en $m^3/s$ ; $K_{3}$= 1.0368)\\
+
+	\item \textbf{M4 : Produit des moyennes des concentrations mesurées et du débit de l'intervalle d'étude}\\
+	Cet algorithme reprend le principe de la méthode M1, le débit moyen étant calculé à partir de la chronique journalière des débits. 
+	
+\begin{center}
+$F_{M4} = K_{4}*\bar{Q}(\sum^{n}_{i=1}(Ci/n))$ \qquad   \qquad \qquad      \qquad  (7)
+\end{center}
+
+$F_{M4} $ = flux estimé par la méthode M4 pour une période donnée (en général sur une année, tonnes/an)\\
+Ci = concentration instantané au moment du prélèvement i (en général mg/l)\\
+$\bar{Q}$ = module annuel ($m^3/s$), déterminé à l'aide de la chronique journalière des débits\\
+n = nombre de prélèvements sur la période de calcul des flux (dans l'exemple ci-après, n=12)\\
+$K_{4}$= facteur de conversion du flux pour un résultat en tonnes/an (pour Ci en mg/l et Qi en $m^3/s$ ; $K_{4}$= 31.536)\\
+
+	\item \textbf{M5(DWC) : Produit des concentrations moyennes pondérées par les débits et le débit moyen}\\
+	Cette méthode est basée sur le calcul de la concentration moyenne pondérée par les débits qui est ensuite multiplié par le débit moyen :
+	
+\begin{center}
+$F_{M5} = K_{5}\frac{\sum^{n}_{i=1}CiQi}{\sum^{n}_{i=1}Qi}*\bar{Q} = K_{5}*C*\bar{Q}$ \qquad      \qquad  (8)
+\end{center}
+$F_{M5}$ = flux estimé par la méthode M5 pour une période donnée (en général sur une année, tonnes/an)\\
+Ci = concentration instantané au moment du prélèvement i (en général mg/l)\\
+$\bar{Q}$  = module annuel ($m^3/s$), déterminé à l'aide de la chronique journalière des débits\\
+C*= concentration moyenne pondérée par les débits, calculé comme le rapport entre le flux de matière et le flux d'eau (en général en mg/l)\\
+n = nombre de prélèvements sur la période de calcul des flux (dans l'exemple ci-après, n=12)\\
+$K_{5}$ = facteur de conversion du flux pour un résultat en tonnes/an (pour Ci en mg/l et Qi en $m^3/s$ ; $K_{5}$= 31.536)\\
+
+	\item \textbf{M6(DWC*) : Méthode 5 et correction "Beale Ratio Estimator" (BRE)}\\
+Cette méthode est basé sur la méthode précédente M5 avec l'ajout d'un coefficient de correction afin de diminuer le biais.\\
+Elle se définit sous la forme :
+\begin{center}
+$F_{M5} = K_{5}\frac{\sum^{n}_{i=1}CiQi}{\sum^{n}_{i=1}Qi}*\bar{Q}*CF_{1}$ \qquad \qquad \qquad   \qquad  (9)
+\end{center}
+avec
+\begin{center}
+$CF_{1} = \left[1+\frac{1}{n}(\frac{Slq}{\bar{lq}})\right]/\left[1+\frac{1}{n}(\frac{Sq^{2}}{\bar{q^{2}}})\right]$
+\end{center}
+
+
+\begin{center}
+$Slq=\frac{1}{n-1}\left[\sum^{n}_{i=1}Qi^{2}Ci-(n\bar{q}\bar{l})\right]$
+\end{center}
+
+
+
+\begin{center}
+$Sq^{2}=\frac{1}{n-1}\left[\sum^{n}_{i=1}Qi^{2}-(n\bar{q}^{2})\right]$
+\end{center}
+$F_{M6}$ = flux estimé par la méthode M6 pour une période donnée (en général sur une année, tonnes/an)\\
+Ci = concentration instantané au moment du prélèvement i (en général mg/l)\\
+Qi = débit instantané au moment du prélèvement i ($m^3/s$)\\
+n = nombre de prélèvements sur la période de calcul des flux (dans l'exemple ci-après, n=12)\\
+$K_{6}$ = facteur de conversion du flux pour un résultat en tonnes/an (pour Ci en mg/l et Qi en $m^3/s$ ; $K_{6}$= 31.536)\\
+$\bar{Q}$ = module annuel ($m^3/s$), déterminé à l'aide de la chronique journalière des débits\\
+$CF_{1}$ = facteur de correction de  Beale (Littlewood, 1995)\\
+$\bar{l}$  = flux moyen journalier pour les jours où les concentrations sont connues (en général en mg/l)\\
+$\bar{q}$= débit moyen journalier pour les jours où les concentrations sont connues (en $m^3/s$)\\
+
+	\item \textbf{M7 : Méthode M6 avec subdivision du jeu de données par rapport  à la période des hautes et basses eaux (critère : débit moyen)}\\
+	Dans cette méthode, on divise le jeu de données de concentrations et de débits mesurés, par rapport au module annuel, a savoir, s'il est supérieur ou inférieur. On applique ensuite la méthode M6 pour les 2 jeux de données afin de calculer le flux de matière transportée en période de hautes et basses eaux. Les 2 résultats sont ensuite sommés afin d'obtenir une estimation de la charge totale sur l'année.
+	
+\begin{center}
+$F_{M7}= \bar{Q}*\left[K_{BE}*C_{BE}^{*}*CF_{BE}+K_{HE}*C_{HE}^{*}*CF_{HE}\right]$\qquad \qquad   \qquad  (10)
+\end{center}
+
+$F_{M7}$= flux estimé par la méthode M7 pour une période donnée (en général sur une année, tonnes/an)\\
+$\bar{Q}$  = module annuel ($m^3/s$), déterminé à l'aide de la chronique journalière des débits\\
+$C_{BE}^{*}$ = concentration moyenne pondérée par les débits pour la période de basses eaux (mg/l)\\  
+$C_{HE}^{*}$ = concentration moyenne pondérée par les débits pour la période de hautes eaux (en mg/l)\\  
+$CF_{BE}$=Facteur de correction de Beale (Equation 9) pour la période de basses eaux\\
+$CF_{HE}$=facteur de correction de Beale (Equation9) pour la période de hautes eaux\\
+$K_{BE}$= facteur de conversion du flux pour un résultat en tonnes/an (pour Ci en mg/l et Q en $m^3/s$) pour les périodes de basses eaux
+\begin{center}
+$K_{BE}=24*3.6/1000*\frac{n_{BE}*365}{n}$
+\end{center}
+$n_{BE}$ =nombre de jours de prélèvements où le débit est inférieur ou supérieur au module annuel\\
+n=nombre de jours total de prélèvements\\
+
+$K_{HE}$= facteur de conversion du flux pour un résultat en tonnes/an (pour Ci en mg/l et Q en $m^3/s$) pour les périodes de hautes eaux.
+\begin{center}
+$K_{HE}=24*3.6/1000*\frac{n_{HE}*365}{n}$
+\end{center}
+$n_{HE}$ =nombre de jours de prélèvements où le débit est inférieur ou supérieur au module annuel\\
+
+	\item \textbf{M8 : Méthode M6 avec subdivision du jeu de donnée par rapport aux périodes de hautes et basses eaux (critère : débit médian)}\\
+	Cette méthode reprend le principe et la formule de la méthode M7 à la différence que le jeu de donnée est divisé par rapport au débit médian calculé à partir des débits à haute résolution temporelle.
+	\item \textbf{M9 : Moyenne des concentrations par classe de débit}\\
+	Cette méthode développé par Verhoff et al. (1980) consiste à subdiviser la chronique des débits en classes de débits. \\
+Pour cela il faut avoir a disposition plusieurs années de prélèvement, dans cet exemple nous disposons de 10 ans de prélèvement mensuel soit un total de 120 points de mesures de concentrations et de débits. \\
+On peut ainsi représenter graphiquement le flux instantané en fonction du débit. Le flux annuel est ensuite calculé par la formule :
+\begin{center}
+$F_{M9} = K_{9}\sum^{m}_{k=1}\bar{F}_{k}*P_{K}$\qquad \qquad   \qquad  \qquad   \qquad (11)
+\end{center}
+$F_{M9}$ = flux estimé par la méthode M9 pour une période donnée (en général sur une année, tonnes/an)\\
+$\bar{F}_{k}$ = flux moyen pour chaque intervalle (en g/s)\\
+$P_{i}$ = probabilité que le flux soit bien dans l'intervalle considéré\\
+$K_{9}$ = facteur de conversion du flux pour un résultat en tonnes/an (pour   en g/s ; $K_{9}$= 31.536)\\
+m= nombre de classes\\
+k= indice de classe de k=1à m\\
+
+Le flux moyen est calculé à l'intérieur de chaque classe par :
+\begin{center}
+$\bar{F}_{k}=\frac{\sum F_{ik}}{m_{k}}$ \qquad \qquad   \qquad  \qquad   \qquad (12)
+\end{center}
+Avec	$\bar{F}$ = flux moyen pour un intervalle k (en g/s)\\
+$F_{ik}$ = flux calculé en chaque points de prélèvements dans un intervalle k (en g/s)\\
+$m_{k}$ = nombre de points de prélèvements dans un intervalle k\\
+
+La probabilité Pi que le flux se situe dans cette classe est obtenue par :
+\begin{center}
+$P_{k}=\frac{d_{k}}{D}$ \qquad \qquad \qquad   \qquad  \qquad   \qquad (13)
+\end{center}
+Avec $P_{k}$	 = probabilité que le flux soit dans l'intervalle k considéré\\
+$d_{k}$	 = nombre de jours dans un intervalle k donné\\
+	D = nombre total de jours de la période d'enregistrement\\
+	On détermine le nombre de classe par :
+	
+\begin{center}
+$I_{c}=\frac{Q_{max}}{n}$ \qquad \qquad \qquad   \qquad  \qquad   \qquad (14)
+\end{center}
+Avec 	$I_{c}$= Intervalle de classe\\
+	$Q_{max}$= Débit maximum des prélèvements ($m^{3}/s$)\\
+n= nombre de classe a déterminer (dans notre exemple nous avons choisi arbitrairement 5 classes)
+
+	\item \textbf{M10 : Distinction entre les flux de surface et de sub-surface d'après la méthode de séparation des écoulements sur la base des hydrogrammes}\\
+	On réalise dans cette méthode une séparation d'hydrogramme sur la base des données journalières de débits pour l'année d'étude afin de distinguer la chronique des écoulements de base (Qb) et celle du ruissellement (Qr). 
+	
+	
+Pour cela, on utilise la formule développée par Eckhardt (2005) :
+\begin{center}
+$Q_{b(t)}=\frac{(1-BFI_{max})aQ_{b(t-1)}+(1-a)BFI_{max}Q_{t}}{1-aBFI_{max}}$ \qquad  \qquad   \qquad (15)
+\end{center}
+avec \qquad   \qquad \qquad   \qquad \qquad   \qquad $Q_{r(t)}=Q_{(t)}-Q_{b(t)}$\\
+ $Q_{b(t)}$= débit de base au temps t\\
+ $Q_{b(t-1)}$	 = débit de base au temps t-1 (à caler de manière a ce que $Q_{b(t)}$ =$Q_{b(t-1)}$ )\\
+ $Q_{t}$ = débit total au temps t\\
+ $BFI_{max}$ = indice du débit de base (=0.8 pour une rivière pérenne à aquifère poreux, Eckhardt, 2005)\\
+	a= coefficient de récession (généralement compris entre 0.9 et 1), se calcule à partir des chroniques de débits lors d'une décrue suffisamment longue et après tarissement des écoulements superficiels, selon la formule :
+\begin{center}
+$Q_{(t)}=Q_{0}e^{-\alpha(t-t_{0})}$ \qquad  
+\end{center}
+\begin{center}
+avec $a= 1-\alpha$
+\end{center}
+Q(t)=débit au temps t\\
+$Q_{0}$= débit au temps initial t=0\\
+$\alpha= $coefficient de tarissement\\
+On réalise ensuite une régression linéaire multiple en utilisant comme variables explicatives les proportions des écoulements de base et de ruissellement au moment des prélèvements ( $\frac{Q_{b}}{Q_{i}}$ et  $\frac{Q_{r}}{Q_{i}}$ respectivement), et comme variable à expliquer la concentration.
+On a donc une équation de la forme :
+\begin{center}
+$\hat{C} = a\frac{Q_{b}}{Q_{i}}+b\frac{Q_{r}}{Q_{i}}+c$  \qquad \qquad   \qquad  \qquad (16)
+\end{center}
+$\hat{C}$ = Concentration estimée (en général en mg/l)\\
+$Q_{i}$=Débit au jour du prélèvement i (en $m^{3}/s$)\\
+$Q_{b}$= débit de base (en $m^{3}/s$)\\
+$Q_{r}$= débit de ruissellement (en $m^{3}/s$)\\
+	a, b et c sont les constantes de la régression à estimer.\\
+On peut ensuite calculer le flux annuel à partir des concentrations estimées et des débits journaliers selon la formule :
+\begin{center}
+$F_{M10} = K_{10}\sum^{365-n}_{i=1}\hat{C}Q_{i}+K_{10}\sum^{n}_{i=1}CiQi$ \qquad \qquad   \qquad  \qquad (17)
+\end{center}
+$F_{M10}$ = flux annuel estimé par la méthode M10 pour une période donnée (en général sur une année, tonnes/an)\\
+ $\hat{C}$ = concentration estimée par régression linéaire multiple (en général mg/l)\\
+ Ci= concentration instantanée au moment du prélèvement (mg/l)\\
+Qi = débit instantané au moment du prélèvement i ($m^{3}/s$)\\
+ $K_{10}$= facteur de conversion du flux pour un résultat en tonnes/an (pour Ci en mg/l et Q en $m^{3}/s$ ; $K_{10}$\=0.0864)\\
+\bigskip
+\bigskip
+On dispose en général de plusieurs années de suivis Ci et Qi (si n=12 par an, ce qui correspond à un échantillonnage mensuel, pour 10 ans de suivi, N=120 valeurs). Sur ces 120 valeurs, on effectue une régression. Ces méthodes d'extrapolation sont basées sur des régressions logarithmiques du type " Rating Curve " dont la forme générale est :
+\begin{center}
+$\hat{C}=\alpha Q^{\beta} \Rightarrow logC =a+blogQ$ avec $a= log\alpha$ et $b=\beta$ \qquad   \qquad  \qquad (18)
+\end{center}
+ (a et b = paramètres de la régression). Ces paramètres de régression sont spécifiques à chaque site et doivent donc être recalculés à chaque fois. Ils sont calculés selon la méthode linéaire des moindres carrées.
+Dans les résultats présentés ci-après, les exemples sont calculés à partir d'un tirage aléatoire de 120 valeurs et le flux réel est calculé à partir de la base de données journalières.
+
+	\item \textbf{M11(IRC) : Régression Logarithmique "concentrations-débits"}\\
+	Cette méthode consiste à calculer les concentrations journalières à partir des débits continus selon l'équation :
+	
+\begin{center}
+$log\hat{C}=a+blogQ$ avec $a=log\alpha$ et $b =\beta$\qquad   \qquad  \qquad (19)
+\end{center}
+Puis, on peut estimer le flux annuel à partir de la formule :
+$F_{M11}=K_{11}\sum^{365-n}_{j=1}\hat{C}_{i}*Q_{i}+K_{11}\sum^{n}_{i=1}C_{i}*Qi$\qquad   \qquad  \qquad (20)
+
+ $F_{M11}$ = flux estimé par la méthode M11 pour une période donnée (en général sur une année, tonnes/an)\\
+ $\hat{C}_{i}$ = Concentration estimée d'après l'équation 18 (mg/l) \\
+Ci = concentration instantanée mesurée pour le prélèvement i (en général mg/l)\\
+Qi = débit journalier au moment du prélèvement ($m^{3}/s$)\\
+ $K_{11}$= facteur de conversion du flux pour un résultat en tonnes/an (pour Ci en mg/l et Q en $m^{3}/s$ ; $K_{11}$=0.0864)\\
+n = nombre de prélèvements\\
+a = constante de la régression\\
+b = pente de la droite de régression\\
+
+
+	\item \textbf{M12(IRC*) : Régression Logarithmique " concentrations-débits " avec la correction de Fergusson}\\
+	Un coefficient de correction (CF12) est ajouté à la méthode M11 afin de corriger la sous estimation due à la transformation logarithmique de l'équation de " Rating curve ". Ce coefficient a été développé par Fergusson (1986) et est donc appelé correction de Fergusson.
+\begin{center}
+$\hat{C}_{c}=\alpha Q^{\beta}*CF_{12}$\qquad   \qquad  \qquad\qquad   \qquad  \qquad  (20)
+\end{center}
+$CF_{12}=exp(2.651\sigma^{12})$
+$\sigma$ correspond à l'écart type de l'estimation\\
+Comme pour M11, le flux annuel est la somme des flux journaliers obtenus à partir des concentrations estimées selon la formule :
+\begin{center}
+$F_{M12}=K_{12}\sum^{365-n}_{i=1}\hat{C}_{c}*Q_{i}+K_{12}\sum^{n}_{i=1}C_{i}*Q_{i}$\qquad  \qquad    \qquad  (22)
+\end{center}
+$F_{M12}$ = flux estimé par la méthode M12 pour une période donnée (en général sur une année, tonnes/an)\\
+$\hat{C}_{c}$ = Concentrations estimées corrigée (mg/l) \\
+Ci = concentration instantané au moment du prélèvement i (en général mg/l)\\
+Qi = débit instantané au moment du prélèvement ($m^{3}/s$)\\
+$K_{12}$= facteur de conversion du flux pour un résultat en tonnes/an (pour Ci en mg/l et Q en $m^{3}/s$ ; $K_{12}$=0.0864)\\
+a = constante de la régression\\
+b = pente de la droite de régression
+
+	\item \textbf{M13 : Régression Logarithmique <<concentrations-débits>> avec la correction de Duan}\\
+	Dans cette méthode, un facteur de correction  (CF13) différent ( <<smearing estimate>>) décrit par Duan en 1983 est appliqué.
+	
+\begin{center}
+$\hat{C}_{c}=\alpha Q^{\beta}*CF_{13}$\qquad  \qquad    \qquad  \qquad  \qquad    \qquad  (23)
+\end{center}
+\begin{center}
+Où $CF_{13}=\frac{1}{n}\sum^{n}{i=1}10^{e_{i}}$ avec $e_{i}=log(C_{i})-log(C_{e_{i}})$ 
+\end{center}
+Ci = Concentration instantanée au moment du prélèvement i\\
+$C_{e_{i}}$ = Concentration estimée pour le même prélèvement i\\
+Le flux annuel se calcule de la même manière que pour les méthodes M11 et M12 en sommant les flux journaliers obtenus à partir des concentrations journalières estimées selon la formule :
+\begin{center}
+$F_{M13}=K_{13}\sum^{365-n}_{i=1}\hat{C}_{c}*Q_{i}+K_{13}\sum^{n}_{i=1}C_{i}*Q_{i}$ \qquad  \qquad    \qquad  (24)
+\end{center}
+  $F_{M13}$= flux estimé par la méthode M13 pour une période donnée (en général sur une année, tonnes/an)\\
+ $\hat{C}_{c}$ = Concentrations estimées corrigées (mg/l) \\
+Ci = concentration instantané au moment du prélèvement i (en général mg/l)\\
+Qi = débit instantané au moment du prélèvement ($m^{3}/s$)\\
+ $K_{13}$= facteur de conversion du flux pour un résultat en tonnes/an (pour Ci en mg/l et Q en $m^{3}/s$ ; $K_{13}$=0.0864)\\
+a = constante de la régression\\
+b = pente de la droite de régression
+
+	\item \textbf{M14 : Régression Logarithmique " concentrations-débits " avec la correction proposée par Walling}\\
+	Walling en 1984 propose un nouvel algorithme pour corriger l'estimation des concentrations déduite de la méthode M11. Les concentrations estimées par la régression sont corrigées en fonction des mesures réalisées et du temps entre les prélèvements. Il élabore ainsi un nouveau facteur de correction (CF14) décrit par :
+	
+\begin{center}
+$\hat{C}_{c}=\hat{C}*CF_{14}$\qquad  \qquad    \qquad  \qquad  \qquad    \qquad  (25)
+\end{center}
+\begin{center}
+Où \qquad  $CF_{14}=\left(\frac{C_{1}}{\hat{C}_{1}}+\frac{t}{T}*\left(\frac{C_{2}}{\hat{C}_{2}}-\frac{C_{1}}{\hat{C}_{1}}\right)\right)$ \qquad  \qquad    \qquad  (26)
+\end{center}
+$\hat{C}_{c}$ = concentration estimée corrigée (en mg/l)\\
+$\hat{C}$ = concentration estimée par la méthode M11 (en mg/l)\\
+$CF_{14}$= facteur de correction associé à  \\
+$C_{1}$ = concentration mesurée du prélèvement précédant l'estimation (en mg/l)\\
+ $\hat{C}_{1}$= concentration estimée par régression (méthode 11) pour la mesure C1 (en mg/l)\\
+ $C_{2}$= concentration mesurée du prélèvement suivant l'estimation (en mg/l)\\
+ $\hat{C}_{2}$= concentration estimée par régression (méthode 11) pour la mesure C2 (en mg/l)\\
+t= nombre de jours séparant la concentration estimée que l'on veut corrigé de C1\\
+T= nombre de jours séparant C1 et C2 \\
+
+On peut ainsi calculer le flux annuel par :
+\begin{center}
+$F_{M14}=K_{14}\sum^{365-n}_{i=1}\hat{C}_{c}*Q_{i}+K_{14}\sum^{n}_{i=1}C_{i}*Q_{i}$\qquad \qquad\qquad   (27)
+\end{center}
+ $F_{M14}$ = flux estimé par la méthode M14 pour une période donnée (en général sur une année, tonnes/an)\\
+ $\hat{C}_{c}$ = Concentrations estimées corrigée (mg/l)\\ 
+Qi = débit instantané associé à $C_{c}$ ($m^{3}/s$)\\
+$K_{14}$= facteur de conversion du flux pour un résultat en tonnes/an (pour Ci en mg/l et Q en $m^{3}/s$ ; $K_{14}$=0.0864)
+	\item \textbf{M15 : Régression Logarithmique <<concentrations-débits>> avec la correction proposée par Philipps et al}\\
+	Philipps et al (1999) propose un facteur de correction (CF15) pour améliorer l'estimation des concentrations déduite par la méthode de régression logarithmique <<concentrations-débits>> (M11 dans ce rapport).\\
+Ce facteur de correction est calculé comme le rapport de la concentration estimée par M11 pour l'échantillon prélevé  sur la valeur mesurée de ce même échantillon :
+\begin{center}
+$CF_{15}=\frac{\hat{C}_{2}}{C_{2}}$\qquad \qquad\qquad \qquad \qquad\qquad   (28)
+\end{center}
+$CF_{15}$= facteur de correction proposé par Philipps et al.\\
+ $\hat{C}_{2}$=Concentration estimée par régression pour le prochain prélèvement (en mg/l)\\
+$C_{2}$= Concentration mesurée lors du prochain prélèvement (en mg/l)\\
+Ce facteur de correction s'utilise comme précédemment dans la méthode 14 (équation22)
+Le flux annuel se calcule donc par : 
+\begin{center}
+$F_{M15}=K_{15}\sum^{365-n}_{i=1}\hat{C}_{c}*Q_{i}+K_{15}\sum^{n}_{i=1}C_{i}*Q_{i}$\qquad\qquad  \qquad  (29)
+\end{center}
+ $F_{M15}$ = flux annuel estimé par la méthode M15  (en général sur une année, tonnes/an)\\
+$\hat{C}_{c}$  = Concentrations estimées corrigée (mg/l) \\
+Qi = débit instantané associé à  $\hat{C}_{c}$ ($m^{3}/s$)\\
+ $K_{15}$= facteur de conversion du flux pour un résultat en tonnes/an (pour Ci en mg/l et Q en $m^{3}/s$ ; $K_{15}$=0.0864)
+	\item \textbf{SRC50 et SRC50*: Méthodes basées sur les régressions segmentées }\\
+	Les relations log C- log Q n'étant pas toujours linéaires, on se propose de segmenter le jeu de données en fonction d'un critère Q50, correspondant au débit médian. Cette méthode est appelée par la suite SRC50 (Segmented Rating Curve). La pente de la régression est calculée pour les valeurs en dessous (b50inf) et au-dessus (b50sup) du débit médian, Q50. \\
+On estime donc les concentrations en fonction du débit en utilisant les régressions appropriées :
+\begin{center}
+$log\hat{C}=a_{50inf}+b_{50inf}logQ$ si $Q<Q_{50}$
+\end{center}
+\begin{center}
+$log\hat{C}=a_{50sup}+b_{50sup}logQ$ si $Q>Q_{50}$
+\end{center}
+Les flux annuels sont ensuite calculés en sommant le produit des débits et des concentrations estimées (pour les jours manquants) et des concentrations mesurées (pour les jours échantillonnés). Le facteur de correction de Ferguson est appliqué aux deux régressions effectuées. Cette méthode sera définie par la suite sous le nom de méthode SRC50*
+\end{itemize}

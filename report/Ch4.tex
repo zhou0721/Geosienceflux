@@ -1,0 +1,291 @@
+\section{Amélioration de l'interface de mainpage}
+L'application ancienne qui a une interface comme figure\ref{fig:mainpage}. Quand nous utilions ce logiciel, ce n'est pas très pratique. Par exemple, losqu'on remplit le numéro de colonne d'année, mois, jour, on doit connaître le contenu du fichier à l'intérieur. Et cette disposition de page est très irrégulière, je n'aime pas la dispostion, mes tuteurs n'aiment pas aussi. Il y a 2 boutons, ce qui n'est pas nécessaire, nous pouvons laisser des mises à jour de fichiers exécuter automatiquement.
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=9cm]{pics/mainpage.jpg}%
+\caption{ancienne l'interface de mainpage}%
+\label{fig:mainpage}%
+\end{figure}
+
+Pour concevoir l'interface de mainpage, j'ai pris plusieurs discussions avec mes tuteurs. Enfin, j'ai utilisé le GridBagLayout, qui est l'un des plus flexibles et complexe des gestionnaires de disposition de la plate-forme Java fournit. Parce que il y a nombreux de composants à placer, donc ça passe beaucoup de temps pour dessiner les pages. Grâce à le GridBagLayout,on peut ranger des composants propre et en bon ordre.La figure\ref{fig:mainpage1} vous montre la nouvelle l'interface de mainpage qui est dessinée en utilisant le GridBagLayout.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=12cm]{pics/mainpage1.jpg}%
+\caption{nouvelle l'interface de mainpage}%
+\label{fig:mainpage1}%
+\end{figure}
+Dans la nouvelle page, j'ai ajouté un textfield pour afficher l'unité de polluant, 2 textfield pour indiquer les surfaces de vallée. Quand on choisit les fichiers de Hydro et Sandre, le système vérifie  le contenu du fichier automatiquement, puis remplir les colonnes d'année, mois, jour automatiquement. Quand on clique sur le bouton <<autre information>>, on peut voir les autres informations sur la station débit ou station qualité. Par exemple, le nom, le pourcentage du foret, le nombre d'habitant, etc... L'utilisateur peut aussi modifier le contenu.
+
+\bigskip
+\textbf{page d'accueil}\\
+Avant le démarrage du programme, il y a une page d'accueil qui affiche les information du laboratoire et les tuteurs. Quand madame Florence m'a demandé de concevoir une page d'accueil, je pensais que seulement le logiciel <<photoshop>> pouvoir le faire, mais <<Photoshop>> n'est pas gratuit, puis ma collègue m'a dit <<GIMP>> peut accomplir la même chose. Donc j'ai conçu cette page par utilisant GIMP,la figure\ref{fig:pagedemarrage} vous montre la page d'accueil. C'est pas très jolie, mais pas mal. 
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=12cm]{pics/pagedemarrage.jpg}%
+\caption{page d'accueil}%
+\label{fig:pagedemarrage}%
+\end{figure}
+
+\section{Module Fichiers}
+ Le menu <<Fichiers>> propose, outre la configuration des dossiers contenant les données, une fenêtre de visualisation:
+\subsection{Configuration}
+Pour chaque lancement,on doit configurer les chemins des fichiers de Hydro,qualité et export. Auparavant, vous deviez définir les chemin chaque fois, après que j'ai modifié, seule la première fois d'être fixés, sauf s'il y a un changement, l'avenir n'a pas besoin d'être mis à nouveau. L'interface de configuration est comme la figure\ref{fig:configuration}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=10cm]{pics/configuration.jpg}%
+\caption{L'interface de configuration}%
+\label{fig:configuration}%
+\end{figure}
+
+\subsection{visualisation}
+
+Cette fenêtre fournit un résumé du nombre de données disponibles au total et par année, ainsi que la période couverte. Il est ainsi possible de se rendre compte de la précision des flux calculés suivant la fréquence des relevés.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=11cm]{pics/visualisation.jpg}%
+\caption{L'interface de visualisation}%
+\label{fig:visualisation}%
+\end{figure}
+
+\section{Module Graphiques}
+le menu <<Graphiques>> sert au choix d'un des sept graphiques suivants:
+\subsection{Série Chronologique}
+	Un graphique chronologique comme la figure\ref{fig:chronologique}.Il permet de visualiser dans le temps l'ensemble des données de débit(en bleu) et de polluant(en rouge).
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=11cm]{pics/chronologique.jpg}%
+\caption{Graphique de série chronologique}%
+\label{fig:chronologique}%
+\end{figure}
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\subsection{Distribution Q et C}
+	Des graphiques de distribution debit et distribution concentration comme la figure\ref{fig:distributionq} et la figure\ref{fig:distributionc}.Ils illustrent les pourcentages des valeur des relevés de débit et polluant.
+	\bigskip
+	\bigskip
+	\bigskip
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=11cm]{pics/distributionq.jpg}%
+\caption{Graphique de distribution débit}%
+\label{fig:distributionq}%
+\end{figure}
+\bigskip
+\bigskip
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=11cm]{pics/distributionc.jpg}%
+\caption{Graphique de distribution concentration}%
+\label{fig:distributionc}%
+\end{figure}
+\newpage
+\subsection{log Q/C(visualisation Q50)}
+	Le graphique comme la figure\ref{fig:logq50} qui permet de caractériser le comportement d'un polluant en fonction de l'augmentation du débit: est-il dilué,plus concentré,ou stable? Nous pouvons voir la pente de b50inf et b50sup.
+
+
+	ce graphique permet, dans le menu suivant, d'obtenir une partie majeure des informations ainsi que les méthodes recommandées,qui dépendent du type de fleuve.
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=11cm]{pics/logq50.jpg}%
+\caption{Graphique de log Q/C (Q50)}%
+\label{fig:logq50}%
+\end{figure}
+\subsection{log Q/C(visualisation saison)}
+		Le graphique comme la figure\ref{fig:logsaison} qui permet de caractériser le comportement d'un polluant en fonction de la changement de saison: est-il le niveau de pollution plus grave en hiver qu'en été? est-il le climat en printemps le plus beau? 
+\bigskip
+\bigskip
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=11cm]{pics/logsaison.jpg}%
+\caption{Graphique de log Q/C (saison)}%
+\label{fig:logsaison}%
+\end{figure}
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\subsection{log Q/C(autres paramètres)}
+		Le graphique de log Q/C(autres paramètres) montre de caractériser le comportement d'un polluant en fonction de la changement du facteur: le facteur peut être la température ou la valeur de PH, tous les polluants peuvent être un facteur. La figure\ref{fig:logparametre} illustre la relation entre la polluant Nitrate et température.
+\bigskip
+\bigskip
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=11cm]{pics/logparametre.jpg}%
+\caption{Graphique de log Q/C (autres paramètres)}%
+\label{fig:logparametre}%
+\end{figure}
+
+\subsection{graphique durée de flux eau}
+		Le graphique durée de flux eau comme la figure\ref{fig:fluxeau}.Nous pouvons savoir la valeur de W2\%, ainsi que les tendances de débit qui dispose dans l'ordre décroissant.
+La variabilité hydrologique(W2\%) est caractérisée par l'indicateur de durée des flux d'eau transportés en 2\% du temps pendant les plus fort débits.
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=11cm]{pics/fluxeau.jpg}%
+\caption{Graphique durée de flux eau}%
+\label{fig:fluxeau}%
+\end{figure}
+\section{Module Calcul flux }
+les flux de polluants transportés par les rivières à différentes stations se déterminent en combinant les concentrations(<<C>>) des polluants avec les flux d'eau transportés (<<Q>>) suivant différentes méthodes de calcul. Par exemple, pour une année donnée, il s'agit de combiner 12 valeurs de concentration(généralement connues avec une fréquence mensuelle) avec 365 valeurs de débits(généralement connus avec une fréquence journalière). Ces calculs peuvent se faire sur plusieurs années(les données de concentrations sont disponibles depuis une trentaine d'années, celles des débits depuis les années 1950 pour la plupart des station HYDRO). \\
+Le calcul devra utiliser 2 types d'informations:
+\begin{enumerate}
+	\item les concentrations, <<C>>, des différents polluants (phosphore,zones...) mesurées au niveau des stations <<QUALITE>> et gérées par les Agence de l'Eau. Le contenu de ce type de fichier est comme la figure\ref{fig:concentration}.
+	\item les débits, <<Q>> mesurés au niveau des stations hydrométriques <<HYDRO>> assemblées à l'échelle de la France par la banque de données Hydro. Le contenu de ce type de fichier est comme la figure\ref{fig:debit}.
+	
+\end{enumerate}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=12cm]{pics/concentration.jpg}%
+\caption{données de concentration}%
+\label{fig:concentration}%
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=12cm]{pics/debit.jpg}%
+\caption{données de débit}%
+\label{fig:debit}%
+\end{figure}
+\newpage
+Dans mon programme, j'ai réussit d'avoir importé 17 méthodes qui décrites en détail dans l'annexe. Lorsque l'on lance une méthode de calcul de flux, la fenêtre de selection période s'ouvre comme la figure\ref{fig:selectperiode}, permettant à l'utilisateur d'entrer le type de calcul qu'il souhaite obtenir: un calcul interannuel, ou bien par année ou saison. En cas de calcul de flux par année ou saison, il est possible d'entrer le mois de départ désiré pour une année,et dans le cas des saisonnalités le nombre de saisons désirées. Il est nécessaire de pouvoir changer le mois de départ car une hydrologique, contrairement à une année civile, commence au mois d'août. Il peut de plus être nécessaire d'ajuster le mois de départ pour étudier certains phénomènes périodiques tels que la dénitrification.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=6cm]{pics/selectperiode.jpg}%
+\caption{fenêtre de selection période}%
+\label{fig:selectperiode}%
+\end{figure}
+
+Quand on choisit <<interannuelle>>, on peut voir la figure\ref{fig:interannuelle} qui donne une valeur de flux et un graphique qui affiche les changement de la valeur de flux de chaque année. Si la méthode est DWC(M5),on peut voir le biais et l'imprécision 10 et l'imprécision 90 comme la figure\ref{fig:interannuellem5}. Les trois paramètres sont calculé par des fichiers fournit par le laboratoire.
+  
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=10cm]{pics/interannuelle.jpg}%
+\caption{Inter annulle(autre méthode)}%
+\label{fig:interannuelle}%
+\end{figure}
+\newpage
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=10cm]{pics/interannuellem5.jpg}%
+\caption{Inter annulle(M5)}%
+\label{fig:interannuellem5}%
+\end{figure}
+
+Quand on choisit <<par année>> ou <<par saison>>, les mêmes données apparaissent sous forme de tableau récapitulatif, et un graphique illustre les mêmes données de manière plus visuelle. 
+
+
+Il est possible de copier le contenu des tableaux ou d'exporter les graphiques dans plusieurs formats d'image afin de stocker le résultat des calculs.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=10cm]{pics/fluxanne.jpg}%
+\caption{Résultat par année)}%
+\label{fig:fluxanne}%
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=10cm]{pics/fluxsaison.jpg}%
+\caption{Résultat par saison}%
+\label{fig:fluxsaison}%
+\end{figure}
+\newpage
+On peut voir qu'il y a un bouton qui s'appelle <<help>> dans la fenêtre <<sélection période>>. Lorsque l'on clique sur le bouton-là, la documentation de référence sera ouvert pour présenter les informations de la méthode comme la figure\ref{fig:aide}. 
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=11cm]{pics/aide.jpg}%
+\caption{documentation de référence}%
+\label{fig:aide}%
+\end{figure}
+
+
+\bigskip
+\bigskip
+\section{Module Système expert}
+	Le menu <<Système expert>> donne 4 sousmenus. On peut obtenir quelques conseils pour calculer le flux de polluant.
+
+\subsection{Calcul d'indicateur}
+C'est à partir des informatons contenues dans la fenêtre d'indicateurs que l'étude des flux pourra être menée, En effet le calcul de l'imprécision et du biais se font à partir des indicateur tels que W2, M2,b50,b50sup et b50inf. Les variabilités hydrochimique et sédimentologique sont caractérisées par l'exposant tronqué(b50sup) de la relation concentration $–$ débit pour les plus forts débits (b50sup). b50inf et b50sup sont au contraire. W2 est le pourcentage du flux maximal transporté en 2\% du temps. La figure\ref{fig:indicateur} vous indique quelques informations importants.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=7cm]{pics/indicateur.jpg}%
+\caption{Fenêtre d'incicateur}%
+\label{fig:indicateur}%
+\end{figure}
+
+\subsection{Méthode recommandée}
+Losqu'on clique sur le sousmenu<<Méthodes recommandées>>, il y aura une table pour vous indiquer quelle méthode est la plus appropriée pour les données actuelles. La figure\ref{fig:recommande} vous dit la méthode DWC(en bleu) est la plus appropriée. Le principe de calcul est basé sur des valeurs W2\% et b50sup.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=12cm]{pics/recommande.jpg}%
+\caption{Fenêtre de la méthode recommandée}%
+\label{fig:recommande}%
+\end{figure}
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\subsection{Incertitude (M5)}
+La matrice incertitude est que pour la méthode M5(DWC), le résultat est calculé par W2,b50sup et interval d'échantillonnage. Dans notre exemple, l'incertitude comme la figure\ref{fig:incertitude} est marqué en bleu.
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=12cm]{pics/incertitude.jpg}%
+\caption{Fenêtre de la matrice incertitude}%
+\label{fig:incertitude}%
+\end{figure}
+
+
+\subsection{Fréquence optimale (M5)}
+La fréquence optimale est aussi que pour la méthode M5(DWC). Cette table ressemble à <<Méthodes recommandées>>, mais son cible est Biais < $\pm10\%$ et Imprécision < $\pm 30\%$. Dans mon exemple, la Fréquence optimale est 15 jours(en bleu) comme la figure{fig:frequenceoptimal}
+\newpage
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=11cm]{pics/frequenceoptimal.jpg}%
+\caption{Fenêtre de fréquence optimale}%
+\label{fig:frequenceoptimal}%
+\end{figure}
+\section{Module Aide}
+Le menu <<Aide>> propose, outre une documentation de référence au format "chm",une fenêtre d'afficher information de auteur.
+\subsection{Aide}
+J'ai créé un fichier d'aide au format html(.chm) avec l'atelier de création Microsoft HTML Workshop.
+Les étapes breves de création un fichier au format html(.chm) sont au-dessous:\cite{10}
+\begin{enumerate}
+	\item la création des fichiers HTML\\
+	Dans cette étape, je vous conseille d'utiliser Microsoft Word pour créer des fichiers .html. c'est très pratique.
+	\item la création de la table des matières
+	\item la création de l'index\\
+	L'index est facultatif, mais permet à l'utilisateur de rechercher de l'aide en saissant ou en sélectionnant des mots clés.
+	\item définition de la fenêtre et du menu
+	\item la compilation
+\end{enumerate}
+
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=10cm]{pics/procedureaide.jpg}%
+\caption{La création du fichier CHM}%
+\label{fig:procedureaide}%
+\end{figure}
+
+\subsection{A propos}
+La fenêtre d'à propos est comme la figure\ref{fig:apropos} qui indique les information de auteur.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=4cm]{pics/apropos.jpg}%
+\caption{A propos}%
+\label{fig:apropos}%
+\end{figure}

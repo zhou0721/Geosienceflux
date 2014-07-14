@@ -1,0 +1,1 @@
+this project is a java application, I finished it in Geoscience.  It helps me to understand how to use JFreeChart to display each type of professional chart. I implement many method to calculate the ratio of the pollution of material.
